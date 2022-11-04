@@ -1,6 +1,6 @@
 {
     "name": "watermark-up",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "watermark that can be mounted on any specified HTML element instead of `document.body` only.",
     "main": "lib/watermark.js",
     "scripts": {
