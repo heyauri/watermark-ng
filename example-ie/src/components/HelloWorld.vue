@@ -42,7 +42,11 @@ export default {
     const watermark = new Watermark({
       // 传参
       content: 'Hello World!',
-      parentElement: document.querySelector("#target")
+      parentElement: document.querySelector("#target"),
+      parentElementId: "target",
+      onWatermarkRemove: function () {
+        alert(123);
+      }
     });
 
     // 创建水印
@@ -51,6 +55,10 @@ export default {
       watermark.load({
         content: "1234567890"
       })
+    }, 1234)
+
+    setTimeout(() => {
+      document.getElementById("wm-ng").parentNode.removeChild(document.getElementById("wm-ng"))
     }, 5200)
   }
 }
