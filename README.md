@@ -1,7 +1,15 @@
 # watermark-ng
 Pure js `Watermark` library that can be mounted on any specified HTML block element instead of the `document.body` only.
 
-Extended from package `watermark-plus@1.6.0` for personal usage. [Original version](https://gitee.com/yanhuakang/watermark)
+Extended from package `watermark-plus@1.6.0` for personal usage. [Original version here](https://gitee.com/yanhuakang/watermark)
+
+What have been promoted in this package:
+- ✅ Custom parment that the watermark can be mounted on instead of only the `body`
+- ✅ Compatible with IE 11
+- ✅ a watermark removed callback is introduced
+- ✅ easier to reload some later content, tips or any other properties for the created watermak
+
+## Detail Introduction
 
 The watermark DOM element now can be mounted on any specified HTML block element via two properties: the `parentElement` and the `parentElementId`.
 
@@ -20,7 +28,10 @@ Under some circumstances, the watermark DOM element will be removed not in an ap
 npm install watermark-ng
 ```
 
+### basic usage
 ```js
+import Watermark from "watermark-ng"
+
 const watermark = new Watermark({
     content: 'Hello World!',
     parentElement: document.querySelector("#target"),

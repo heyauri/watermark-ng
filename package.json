@@ -1,11 +1,12 @@
 {
     "name": "watermark-ng",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "watermark that can be mounted on any specified HTML element instead of `document.body` only.",
     "main": "lib/watermark.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "heyauri",
-    "license": "MIT"
+    "license": "MIT",
+    "keywords": ["watermark","vue","custom element","水印"]
 }
