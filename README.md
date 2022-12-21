@@ -8,7 +8,7 @@ What have been promoted in this package:
 - ✅ Compatible with IE 11
 - ✅ Introduce a new callback while the watermark is removed by any inappropriate methods (via `Dev tools` or other code)
 - ✅ Easier to reload some later content, tips or any other options for the created watermark using the `load` function
-- ✅ More than one watermark instance can now be applied within the same web-page as long as each instance has specified different `outerId` and `innerId`
+- ✅ More than one watermark instance can now be applied within the same web-page as long as each instance has specified different `watermarkId`
 - ✅ After the web page is resized, the watermark will be reloaded automatically, which can prevent some display issues of the watermark
 
 ## Detail Introduction
@@ -68,8 +68,7 @@ setTimeout(() => {
 | onSuccess         | Function    | `function(){}`  | Called after the watermark is created successfully                                                                                                                                                                |
 | onDestroy         | Function    | `function(){}`  | Called after the watermark is destroyed successfully                                                                                                                                                              |
 | onWatermarkRemove | Function    | `function(){}`  | Called after the watermark is removed not in appropriate way (via `Dev Tools` or other code)                                                                                                                             |
-| innerId           | String      | `'wm-ng-inner'` | If you need to applied more than one watermark instances within the same web-page, at least one watermark instance should have specified a different innerId. Otherwise the display of watermark may be affected. |
-| outerId           | String      | `'wm-ng'`       | If you need to applied more than one watermark instances within the same web-page, at least one watermark instance should have specified a different outerId. Otherwise the display of watermark may be affected. |
+| watermarkId           | String      | `'wm-ng-dom'`       | If you need to applied more than one watermark instances within the same web-page, at least one watermark instance should have specified a different `watermarkId`. Otherwise the display of watermark may be affected. |
 
 
 ### Examples 
@@ -87,8 +86,7 @@ watermark.create();
 const watermark2 = new Watermark({
     content: 'Second watermark',
     parentElementId: "target2",
-    innerId:"wm2-inner",
-    outerId:"wm2-outer",
+    watermarkId:"wm-ng2",
 });
 watermark2.create();
 ```

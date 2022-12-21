@@ -45,22 +45,24 @@ export default {
     const watermark = new Watermark({
       // 传参
       content: 'Hello World!',
-      tip:"123",
+      tip: "123",
+      rotate: 45,
       parentElement: document.querySelector("#target"),
       parentElementId: "target",
       onWatermarkRemove: function () {
         // alert(123);
-      }
+      },
     });
 
     // 创建水印
     watermark.create();
     const watermark2 = new Watermark({
       // 传参
-      content: 'Hello World!',
+      image: 'https://gw.alipayobjects.com/zos/bmw-prod/59a18171-ae17-4fc5-93a0-2645f64a3aca.svg',
       parentElementId: "target1",
-      innerId:"wm2-inner",
-      outerId:"wm2-outer",
+      watermarkId: "wm2-inner",
+      imageWidth:400,
+      width:400,
       onWatermarkRemove: function () {
         // alert(123);
       }
@@ -75,7 +77,7 @@ export default {
     }, 1234)
 
     setTimeout(() => {
-      document.getElementById("wm-ng").parentNode.removeChild(document.getElementById("wm-ng"))
+      document.getElementById("wm-ng-dom").parentNode.removeChild(document.getElementById("wm-ng-dom"))
     }, 5200)
   }
 }
